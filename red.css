@@ -1,0 +1,119 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgba(89, 212, 202, 0.89);
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  width: 92%;
+  margin: 4px auto;
+  height: 11vh;
+  align-items: center;
+  margin-left: -51px;
+}
+
+ button {
+  color: white;
+  background-color: rgb(44, 9, 7);
+  border-radius: 10px solid green;
+  padding: 10px;
+} 
+button{
+  color:brown;
+  padding:13px;
+  margin: 10px;
+  border-radius: 9px solid green;
+}
+
+.logo-container,
+nav {
+  flex: 1;
+  animation: all 1s ease;
+}
+
+nav {
+  flex: 2;
+}
+
+ul,
+.logo-container {
+  animation: drop 2s ease;
+}
+.logo-container:hover{
+  transform:rotate(10deg);
+}
+
+.logo-container,
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(65, 65, 65, 0.233);
+  animation: all 4s ease;
+  
+}
+
+.nav-link:hover {
+  color: rgb(8, 63, 114);
+  
+  
+}
+ul li:hover{
+  box-shadow: none;
+  animation: all 5s ease;
+
+}
+
+ul li {
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 0px 3px 3px gainsboro;
+
+}
+
+.father {
+  border: 2px solid gray;
+  width: 332px;
+  height: 380px;
+  margin: 110px 92px;
+}
+
+h3 {
+  text-align: center;
+}
+
+img {
+  width: 50px;
+  opacity: 0.6;
+  margin-top: 8px;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translatexy(100deg);
+  }
+
+  100% {
+    opacity: 0.9;
+    transform: translatey(0deg);
+  }
+}
+.kayna{
+  color:brown;
+
+}
+.yass{
+  color:greenyellow;
+} 
