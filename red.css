@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+.error{
+    color:black;
+
+}
+.succ{
+  color:yellow;
+  border:14px
+  
+}
 body {
   color: rgba(89, 212, 202, 0.89);
   font-family: "Poppins", sans-serif;
@@ -16,20 +25,11 @@ header {
   height: 11vh;
   align-items: center;
   margin-left: -51px;
-}
-
- button {
-  color: white;
-  background-color: rgb(44, 9, 7);
-  border-radius: 10px solid green;
-  padding: 10px;
+  
 } 
-button{
-  color:brown;
-  padding:13px;
-  margin: 10px;
-  border-radius: 9px solid green;
-}
+
+ 
+
 
 .logo-container,
 nav {
@@ -110,10 +110,3 @@ img {
     transform: translatey(0deg);
   }
 }
-.kayna{
-  color:brown;
-
-}
-.yass{
-  color:greenyellow;
-} 

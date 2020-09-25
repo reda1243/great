@@ -488,23 +488,44 @@
 //     }
 // }
 // console.log(user.findInfo())
-let sum = 0;
-let i = 2;
-let evenSum = 0;
-let addSum = 0;
-while (i <= 10) {
-  sum = sum + i;
-  if (i % 2 == 0) {
-    evenSum = evenSum + i;
-  } else {
-    addSum = addSum + i;
-  }
-  i += 1;
-  console.log(i);
-}
-console.log(sum);
-console.log(evenSum);
-console.log(addSum);
+// let sum = 0;
+// let i = 2;
+// let evenSum = 0;
+// let addSum = 0;
+// while (i <= 10) {
+//   sum = sum + i;
+//   if (i % 2 == 0) {
+//     evenSum = evenSum + i;
+//   } else {
+//     addSum = addSum + i;
+//   }
+//   i += 1;
+//   console.log(i);
+// }
+// console.log(sum);
+// console.log(evenSum);
+// console.log(addSum);
 
-const divesion = document.querySelector('p')
-console.log(divesion.remove())
+// const divesion = document.querySelector('p')
+// console.log(divesion.remove())
+// const para = document.querySelector('p');
+// console.log(para.hasAttribute('class'))
+// para.classList.add('myName')
+// para.setAttribute('style', "font-size:39px")
+// para.style.color='red'
+// para.setAttribute('style','color:green')
+// console.log(para.getAttribute('class'))
+// this is for the document
+
+// const header = document.querySelector('.from')
+// header.setAttribute('class','error')
+// console.log(header.getAttribute('class'))
+// header.innerText = "the name is "
+const para = document.querySelectorAll('p')
+para.forEach(par =>{
+if(par.innerText.includes("error")){
+    par.classList.add('error')
+}else if(par.innerText.includes("secc")){
+    par.classList.add('succ')
+}
+})
