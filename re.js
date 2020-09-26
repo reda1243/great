@@ -521,11 +521,20 @@
 // header.setAttribute('class','error')
 // console.log(header.getAttribute('class'))
 // header.innerText = "the name is "
+const nums = document.querySelector('.nums')
+console.log(nums.children)
+nums.innerHTML += "<p>secc</p>"
 const para = document.querySelectorAll('p')
+
 para.forEach(par =>{
-if(par.innerText.includes("error")){
-    par.classList.add('error')
-}else if(par.innerText.includes("secc")){
-    par.classList.add('succ')
-}
+    if(par.innerText.includes("error")){
+        par.classList.add('error')
+    }else if(par.innerText.includes("secc")){
+        par.classList.add('succ')
+    }
+})
+const pan = document.querySelectorAll('p')
+Array.from(pan).forEach((pans,index) =>{
+    console.log(pans,index + 1)
+    
 })
