@@ -4,15 +4,16 @@
   box-sizing: border-box;
 }
 
-.error{
-    color:black;
+.error {
+  color: black;
 
 }
-.succ{
-  color:yellow;
-  border:14px
-  
+
+.succ {
+  color: yellow;
+  border: 14px
 }
+
 body {
   color: rgba(89, 212, 202, 0.89);
   font-family: "Poppins", sans-serif;
@@ -25,10 +26,10 @@ header {
   height: 11vh;
   align-items: center;
   margin-left: -51px;
-  
-} 
 
- 
+}
+
+
 
 
 .logo-container,
@@ -45,8 +46,9 @@ ul,
 .logo-container {
   animation: drop 2s ease;
 }
-.logo-container:hover{
-  transform:rotate(10deg);
+
+.logo-container:hover {
+  transform: rotate(10deg);
 }
 
 .logo-container,
@@ -60,15 +62,16 @@ ul,
   text-decoration: none;
   color: rgba(65, 65, 65, 0.233);
   animation: all 4s ease;
-  
+
 }
 
 .nav-link:hover {
   color: rgb(8, 63, 114);
-  
-  
+
+
 }
-ul li:hover{
+
+ul li:hover {
   box-shadow: none;
   animation: all 5s ease;
 

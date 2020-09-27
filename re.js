@@ -20,7 +20,7 @@
 //  * }
 //  * //end the fonction red
 //  *
-//  * // start calc your age
+//  * // i calc your age
 //  *
 //  * function calcMe(age){
 //  *
@@ -79,7 +79,7 @@
 //      alert(first + "+" + secend + "=" + allthe)
 
 //   }
-//   //start
+//   //i
 //   var theName = [
 //      "       raja",
 //      "fatiha",
@@ -105,9 +105,9 @@
 //   var myname = "      ";
 //   console.log(myname.trim())
 
-//   console.log(myname.replace("r", "R").trim().toUpperCase().startsWith("R"))*
+//   console.log(myname.replace("r", "R").trim().toUpperCase().isWith("R"))*
 
-//   //for  start
+//   //for  i
 //   /*for (i = 0; i <= 6; i++) {
 //      console.log(i)
 //   }
@@ -118,7 +118,7 @@
 //      i++
 //   }
 
-//   //while start
+//   //while i
 
 //   //while end
 //   var i = o;
@@ -127,7 +127,7 @@
 //      i++
 
 //   }
-//   //do while start
+//   //do while i
 //   var i = 0;
 //   do {
 //      console.log(i)
@@ -292,7 +292,7 @@
 //   // console.log(use.lesfr())
 //   // console.log(use.login())
 
-//   //Now We Ganna Start Learning DOM = Document Object Model
+//   //Now We Ganna i Learning DOM = Document Object Model
 
 //   const ph = document.querySelectorAll('p')
 
@@ -521,12 +521,8 @@
 // header.setAttribute('class','error')
 // console.log(header.getAttribute('class'))
 // header.innerText = "the name is "
-const nums = document.querySelector('.nums')
-console.log(nums.children)
-nums.innerHTML += "<p>secc</p>"
-Array.from(nums.children).forEach(nu =>{
-nu.classList.add('succ')
-})
+c
+
 // const para = document.querySelectorAll('p')
 
 // para.forEach(par =>{
@@ -538,6 +534,20 @@ nu.classList.add('succ')
 // })
 const pan = document.querySelectorAll('p')
 Array.from(pan).forEach((pans,index) =>{
-    console.log(pans,index + 1)
+    console.log(pans,index + 9)
     
+})
+
+let i = 0;
+while(i < 10){
+    i++
+    if(i == 4){
+        continue
+    }
+    console.log(i)
+}
+const head = document.querySelectorAll('body')
+head.forEach((allElem,index) =>{
+    allElem += "<p>reda</p>"
+
 })
