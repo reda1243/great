@@ -531,32 +531,23 @@
 //         par.classList.add('succ')
 //     }
 // })
+// const nums = document.querySelector('.nums')
+// nums.addEventListener('click',re =>{
+//   console.log('iamd the ul')
+// })
 const pan = document.querySelectorAll("p");
 Array.from(pan).forEach((pans, index) => {
   console.log(pans, index + 9);
 });
 
-let i = 0;
-while (i < 10) {
-  i++;
-  if (i == 4) {
-    continue;
-  }
-  console.log(i);
-}
-const head = document.querySelectorAll("body");
-head.forEach((allElem, index) => {
-  allElem += "<p>reda</p>";
-});
-const btn = document.querySelector("button");
-const para = document.querySelectorAll("p")
-const doverson = document.querySelectorAll('.nums')
-doverson.remove()
-btn.addEventListener("click", () => {
 
-});
-para.forEach(pars =>{
-    pars.addEventListener('click',()=>{
-pars.remove
-    })
+
+
+
+const paras = document.querySelectorAll('p')
+paras.forEach(para=>{
+  para.addEventListener('click',e=>{
+    para.style.color = "red"
+console.log(`i docation the `)
 })
+}) 
