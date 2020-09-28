@@ -521,7 +521,6 @@
 // header.setAttribute('class','error')
 // console.log(header.getAttribute('class'))
 // header.innerText = "the name is "
-c
 
 // const para = document.querySelectorAll('p')
 
@@ -532,22 +531,32 @@ c
 //         par.classList.add('succ')
 //     }
 // })
-const pan = document.querySelectorAll('p')
-Array.from(pan).forEach((pans,index) =>{
-    console.log(pans,index + 9)
-    
-})
+const pan = document.querySelectorAll("p");
+Array.from(pan).forEach((pans, index) => {
+  console.log(pans, index + 9);
+});
 
 let i = 0;
-while(i < 10){
-    i++
-    if(i == 4){
-        continue
-    }
-    console.log(i)
+while (i < 10) {
+  i++;
+  if (i == 4) {
+    continue;
+  }
+  console.log(i);
 }
-const head = document.querySelectorAll('body')
-head.forEach((allElem,index) =>{
-    allElem += "<p>reda</p>"
+const head = document.querySelectorAll("body");
+head.forEach((allElem, index) => {
+  allElem += "<p>reda</p>";
+});
+const btn = document.querySelector("button");
+const para = document.querySelectorAll("p")
+const doverson = document.querySelectorAll('.nums')
+doverson.remove()
+btn.addEventListener("click", () => {
 
+});
+para.forEach(pars =>{
+    pars.addEventListener('click',()=>{
+pars.remove
+    })
 })
