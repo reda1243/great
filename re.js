@@ -540,14 +540,49 @@ Array.from(pan).forEach((pans, index) => {
   console.log(pans, index + 9);
 });
 
+const paras = document.querySelectorAll("p");
+paras.forEach((para) => {
+  para.addEventListener("click", (e) => {
+    para.style.color = "pink";
+    for (let i = 0; i < paras.length; i++) {
+      console.log(paras[i]);
+    }
+  });
+});
 
+let theForm = document.querySelector(".myForm");
+let theInput = document.querySelector("input");
+let fednax = document.querySelector(".raja");
+let reg = /^[a-zA-Z]{5,10}$/;
 
+theForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // let check = theInput.value
+  if (reg.test(theInput.value)) {
+    fednax.innerText = "yes";
+  } else {
+    fednax.innerText = "no";
+  }
+});
+theForm.addEventListener("keyup", (e) => {
+  e.preventDefault();
+  // let check = theInput.value
+  if (reg.test(theInput.value)) {
+    theInput.setAttribute("class", "succ");
+    fednax.innerText = "This is valid";
+  } else {
+    theInput.classList.add("error");
+    fednax.innerText = "this is not valid";
+  }
+});
+let users = [
+  { name: "Basma", activite: true },
+  { name: "Walid", activite: true },
+  { name: "Mohamed", activite: false },
+  { name: "Yassine", activite: false },
+];
 
-
-const paras = document.querySelectorAll('p')
-paras.forEach(para=>{
-  para.addEventListener('click',e=>{
-    para.style.color = "red"
-console.log(`i docation the `)
-})
-}) 
+  result = users.filter((resul) => resul.activite);
+console.log(result);
+let date = new Date('02-03-2002')
+console.log(date)

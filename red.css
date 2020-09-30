@@ -9,13 +9,10 @@
 
 }
 
-.succ {
-  color: yellow;
-  border: 14px
-}
+
 
 body {
-  color: rgba(89, 212, 202, 0.89);
+  color: rgba(3, 0, 0, 0.89);
   font-family: "Poppins", sans-serif;
 }
 
@@ -27,6 +24,13 @@ header {
   align-items: center;
   margin-left: -51px;
 
+}
+.zone{
+
+  background-color: brown;
+  height: 108px;
+  margin: 29px auto;
+  width: 50%;
 }
 
 
@@ -112,4 +116,29 @@ img {
     opacity: 0.9;
     transform: translatey(0deg);
   }
+}
+input{
+  padding: 15px;
+  background: rgb(10, 194, 201);
+  border-radius: 16px;
+  display: block;
+  margin: auto;
+}
+button{
+  color: rgb(144, 128, 235);
+  padding: 15px;
+  border-radius: 15px;
+  display: block;
+  margin: auto;
+
+
+}
+.raja{
+text-align: center;
+}
+.succ{
+  border: 3px solid hsla(135, 82%, 26%, 0.966);
+}
+.error{
+  border: 3px solid red;
 }
