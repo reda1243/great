@@ -564,6 +564,8 @@ theForm.addEventListener("submit", (e) => {
     fednax.innerText = "no";
   }
 });
+// this is the keyup for the log in 
+
 theForm.addEventListener("keyup", (e) => {
   e.preventDefault();
   // let check = theInput.value
@@ -575,14 +577,13 @@ theForm.addEventListener("keyup", (e) => {
     fednax.innerText = "this is not valid";
   }
 });
+//this is some methode to get you adviece for holw the wodrld to see what cat hapent in this momeb
 let users = [
   { name: "Basma", activite: true },
   { name: "Walid", activite: true },
   { name: "Mohamed", activite: false },
-  { name: "Yassine", activite: false },
+  { name: "bassine", activite: false },
 ];
 
-  result = users.filter((resul) => resul.activite);
-console.log(result);
-let date = new Date('02-03-2002')
-console.log(date)
+  result = users.filter((resul) => resul.name.includes("ba"));
+console.log(result)
