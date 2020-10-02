@@ -587,3 +587,6 @@ let users = [
 
   result = users.filter((resul) => resul.name.includes("ba"));
 console.log(result)
+function reda(){
+  users.filter()
+}
