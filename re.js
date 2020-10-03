@@ -564,7 +564,7 @@ theForm.addEventListener("submit", (e) => {
     fednax.innerText = "no";
   }
 });
-// this is the keyup for the log in 
+// this is the keyup for the log in
 
 theForm.addEventListener("keyup", (e) => {
   e.preventDefault();
@@ -585,8 +585,26 @@ let users = [
   { name: "bassine", activite: false },
 ];
 
-  result = users.filter((resul) => resul.name.includes("ba"));
-console.log(result)
-function reda(){
-  users.filter()
-}
+// result = users.filter((resul) => resul.name.includes("ba"));
+// console.log(result);
+// function reda() {
+//   users.filter();
+// }
+
+
+
+
+
+
+//this methode is filter 
+const search = 'Basma'
+let filrs = users.filter(user => user.name.toLocaleLowerCase().includes(search.toLowerCase()))
+console.log(filrs)
+//this methode is find
+let find = users.find(user => user.name.includes('a'))
+console.log(find)
+//this methode is reduce
+let resuce = [3,6,4,34,34].reduce((a,b) => a + b)
+console.log(resuce)
+
+
