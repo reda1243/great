@@ -25,7 +25,8 @@ header {
   margin-left: -51px;
 
 }
-.zone{
+
+.zone {
 
   background-color: brown;
   height: 108px;
@@ -117,14 +118,16 @@ img {
     transform: translatey(0deg);
   }
 }
-input{
+
+input {
   padding: 15px;
   background: rgb(10, 194, 201);
   border-radius: 16px;
   display: block;
   margin: auto;
 }
-button{
+
+button {
   color: rgb(144, 128, 235);
   padding: 15px;
   border-radius: 15px;
@@ -133,12 +136,29 @@ button{
 
 
 }
-.raja{
-text-align: center;
+
+.raja {
+  text-align: center;
 }
-.succ{
+
+.succ {
   border: 3px solid hsla(135, 82%, 26%, 0.966);
 }
-.error{
+
+.error {
   border: 3px solid red;
+}
+
+.is {
+  margin: 36px auto;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 5em;
+  text-align: center;
+  margin: 40px auto;
+color: mediumslateblue;
+display: block;
+}
+span {
+  padding: 30px;
 }

@@ -578,11 +578,22 @@ theForm.addEventListener("keyup", (e) => {
   }
 });
 //this is some methode to get you adviece for holw the wodrld to see what cat hapent in this momeb
-let users = [
-  { name: "Basma", activite: true },
-  { name: "Walid", activite: true },
-  { name: "Mohamed", activite: false },
-  { name: "bassine", activite: false },
+let users = [{
+    name: "Basma",
+    activite: true
+  },
+  {
+    name: "Walid",
+    activite: true
+  },
+  {
+    name: "Mohamed",
+    activite: false
+  },
+  {
+    name: "bassine",
+    activite: false
+  },
 ];
 
 // result = users.filter((resul) => resul.name.includes("ba"));
@@ -591,20 +602,40 @@ let users = [
 //   users.filter();
 // }
 
-
-
-
-
-
-//this methode is filter 
-const search = 'Basma'
-let filrs = users.filter(user => user.name.toLocaleLowerCase().includes(search.toLowerCase()))
-console.log(filrs)
+//this methode is filter
+const search = "Basma";
+let filrs = users.filter((user) =>
+  user.name.toLocaleLowerCase().includes(search.toLowerCase())
+);
+console.log(filrs);
 //this methode is find
-let find = users.find(user => user.name.includes('a'))
-console.log(find)
+let find = users.find((user) => user.name.includes("a"));
+console.log(find);
 //this methode is reduce
-let resuce = [3,6,4,34,34].reduce((a,b) => a + b)
-console.log(resuce)
+let resuce = [3, 6, 4, 34, 34].reduce((a, b) => a + b);
+console.log(resuce);
+const para = document.querySelector(".is");
 
+const myClock = () => {
+  let time = new Date();
+  let hours = time.getHours();
+  let min = time.getMinutes();
+  let secound = time.getSeconds();
+  let day = time.getDate()
+  // console.log(hours,min,secound);
+  let timing = `
+    <span>${day} : </span>
+    <span>${hours} : </span>
+    <spam>${min} : </span>
+    <span>${secound} </span>
 
+    `;
+  if (hours == 14 && min == 53 && secound == 00) {
+
+    alert('Hello weak up ')
+  }
+  para.innerHTML = timing;
+};
+// console.log(myClock())
+// setInterval(myClock(),1000)
+setInterval(myClock, 1000);
