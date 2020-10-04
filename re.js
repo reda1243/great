@@ -616,21 +616,21 @@ let resuce = [3, 6, 4, 34, 34].reduce((a, b) => a + b);
 console.log(resuce);
 const para = document.querySelector(".is");
 
+//this is the real horlang 
 const myClock = () => {
   let time = new Date();
   let hours = time.getHours();
   let min = time.getMinutes();
   let secound = time.getSeconds();
-  let day = time.getDate()
-  // console.log(hours,min,secound);
+  let day = time.getDate();
+
   let timing = `
     <span>${day} : </span>
     <span>${hours} : </span>
     <spam>${min} : </span>
-    <span>${secound} </span>
-
+    <span>${secound}</span>
     `;
-  if (hours == 14 && min == 53 && secound == 00) {
+  if (hours == 15 && min == 18 && secound == 00) {
 
     alert('Hello weak up ')
   }
@@ -639,3 +639,4 @@ const myClock = () => {
 // console.log(myClock())
 // setInterval(myClock(),1000)
 setInterval(myClock, 1000);
+
