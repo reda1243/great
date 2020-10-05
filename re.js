@@ -578,21 +578,22 @@ theForm.addEventListener("keyup", (e) => {
   }
 });
 //this is some methode to get you adviece for holw the wodrld to see what cat hapent in this momeb
-let users = [{
+let users = [
+  {
     name: "Basma",
-    activite: true
+    activite: true,
   },
   {
     name: "Walid",
-    activite: true
+    activite: true,
   },
   {
     name: "Mohamed",
-    activite: false
+    activite: false,
   },
   {
     name: "bassine",
-    activite: false
+    activite: false,
   },
 ];
 
@@ -615,8 +616,9 @@ console.log(find);
 let resuce = [3, 6, 4, 34, 34].reduce((a, b) => a + b);
 console.log(resuce);
 const para = document.querySelector(".is");
+let holeTime = document.querySelector(".holeTime");
 
-//this is the real horlang 
+//this is the real horlang
 const myClock = () => {
   let time = new Date();
   let hours = time.getHours();
@@ -629,14 +631,44 @@ const myClock = () => {
     <span>${hours} : </span>
     <spam>${min} : </span>
     <span>${secound}</span>
-    `;
-  if (hours == 15 && min == 18 && secound == 00) {
+    
 
-    alert('Hello weak up ')
+    `;
+  if (hours == 16 && min == 06 && secound == 00) {
+    alert("Hello weak up ");
   }
   para.innerHTML = timing;
 };
 // console.log(myClock())
 // setInterval(myClock(),1000)
-setInterval(myClock, 1000);
 
+setInterval(myClock, 1000);
+//this is for diffecelt but with time will be so easy
+info(10, (call) => {
+  if (call.id == 1) {
+    console.log("yes");
+  }
+});
+function info(id, callback) {
+  setTimeout(() => {
+    console.log("my name is reda");
+    return callback({ id: id, name: "reda", oneLine: true });
+  }, 2000);
+}
+  produnt().then(nam => console.log(nam)).catch(err => console.error(err))
+
+function produnt(callbacks) {
+  return new Promise((resolve, reject) => {
+  let status = true;
+  setTimeout(() => {
+    console.log("my name is reda");
+    if (!status) {
+      resolve("yes ");
+    } else {
+      reject("no");
+    }
+  }, 2000);
+  })
+
+}
+//end of the callback never give up
