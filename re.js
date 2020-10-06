@@ -639,10 +639,10 @@ const myClock = () => {
   }
   para.innerHTML = timing;
 };
-// console.log(myClock())
-// setInterval(myClock(),1000)
-
 setInterval(myClock, 1000);
+
+
+
 //this is for diffecelt but with time will be so easy
 info(10, (call) => {
   if (call.id == 1) {
@@ -655,20 +655,45 @@ function info(id, callback) {
     return callback({ id: id, name: "reda", oneLine: true });
   }, 2000);
 }
-  produnt().then(nam => console.log(nam)).catch(err => console.error(err))
 
+//end of the callback never give up
+
+//this is the start of the promis
+reda().then(acc => console.log(err)).catch(refc => console.log(refc))
+
+function reda(){
+  return new Promise((re,reje)=>{
+  setTimeout(()=>{
+let satus = true;
+if(satus){
+  re(alert('yes'))
+}else{
+  reje(alert('no'))
+}
+  },1000)
+  })
+}
+//the end promiss
+
+//this is the syanc anda await
+run()
+async function run() {
+  let run = await produnt()
+  console.log(run)
+}
 function produnt(callbacks) {
   return new Promise((resolve, reject) => {
-  let status = true;
-  setTimeout(() => {
-    console.log("my name is reda");
-    if (!status) {
-      resolve("yes ");
-    } else {
-      reject("no");
-    }
-  }, 2000);
-  })
-
+    let status = false;
+    setTimeout(() => {
+      console.log("my name is reda");
+      if (status) {
+        resolve("yes ");
+      } else {
+        reject("no");
+      }
+    }, 2000);
+  });
 }
-//end of the callback never give up
+
+console.error('heelo')
+//this is the end of the async and await
