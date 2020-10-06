@@ -558,11 +558,11 @@ let reg = /^[a-zA-Z]{5,10}$/;
 theForm.addEventListener("submit", (e) => {
   e.preventDefault();
   // let check = theInput.value
-  if (reg.test(theInput.value)) {
-    fednax.innerText = "yes";
-  } else {
-    fednax.innerText = "no";
-  }
+  // if (reg.test(theInput.value)) {
+  //   fednax.innerText = "yes";
+  // } else {
+  //   fednax.innerText = "no";
+  console.log(theInput.value)
 });
 // this is the keyup for the log in
 
@@ -578,8 +578,7 @@ theForm.addEventListener("keyup", (e) => {
   }
 });
 //this is some methode to get you adviece for holw the wodrld to see what cat hapent in this momeb
-let users = [
-  {
+let users = [{
     name: "Basma",
     activite: true,
   },
@@ -617,6 +616,7 @@ let resuce = [3, 6, 4, 34, 34].reduce((a, b) => a + b);
 console.log(resuce);
 const para = document.querySelector(".is");
 let holeTime = document.querySelector(".holeTime");
+let onClick = document.querySelector('.flr')
 
 //this is the real horlang
 const myClock = () => {
@@ -637,11 +637,17 @@ const myClock = () => {
   if (hours == 16 && min == 06 && secound == 00) {
     alert("Hello weak up ");
   }
-  para.innerHTML = timing;
+  onClick.addEventListener('click', () => {
+    setTimeout(() => {
+      setInterval(() => {
+        para.innerHTML = timing;
+
+      }, 1000)
+    }, 2000)
+
+  })
 };
 setInterval(myClock, 1000);
-
-
 
 //this is for diffecelt but with time will be so easy
 info(10, (call) => {
@@ -649,43 +655,58 @@ info(10, (call) => {
     console.log("yes");
   }
 });
+
 function info(id, callback) {
   setTimeout(() => {
     console.log("my name is reda");
-    return callback({ id: id, name: "reda", oneLine: true });
+    return callback({
+      id: id,
+      name: "reda",
+      oneLine: true
+    });
   }, 2000);
 }
 
 //end of the callback never give up
 
 //this is the start of the promis
-reda().then(acc => console.log(err)).catch(refc => console.log(refc))
+reda().then(acc => alert(acc)).catch(refc => alert(refc))
 
-function reda(){
-  return new Promise((re,reje)=>{
-  setTimeout(()=>{
-let satus = true;
-if(satus){
-  re(alert('yes'))
-}else{
-  reje(alert('no'))
-}
-  },1000)
+function reda() {
+  return new Promise((re, reje) => {
+    setTimeout(() => {
+      let satus = false;
+      if (satus) {
+        re(('yes'))
+      } else {
+        reje(('no'))
+      }
+    }, 1000)
   })
 }
 //the end promiss
 
 //this is the syanc anda await
-run()
-async function run() {
-  let run = await produnt()
-  console.log(run)
+
+
+async function runs() {
+  try {
+
+    let run = await produnt();
+    console.log(run);
+  } catch (error) {
+    console.log(error)
+  }
+
 }
-function produnt(callbacks) {
+
+runs()
+
+function produnt() {
   return new Promise((resolve, reject) => {
     let status = false;
     setTimeout(() => {
-      console.log("my name is reda");
+      console.log("my name is reda")
       if (status) {
         resolve("yes ");
       } else {
@@ -695,5 +716,62 @@ function produnt(callbacks) {
   });
 }
 
-console.error('heelo')
 //this is the end of the async and await
+// fetch('https://jsonplaceholder.typicode.com/posts')
+// .then(ress => ress.json())
+// .then(post => {
+
+// post.forEach(postes =>{
+//   console.log(postes.id == 80)
+// })
+// })
+// .catch(errors => console.log(errors))
+localStorage.setItem('note', '20')
+localStorage.setItem('note', '1243');
+let item = localStorage.getItem('note')
+console.log(item)
+localStorage.clear()
+let infos = [{
+    name: "Basma",
+    activite: true,
+  },
+  {
+    name: "Walid",
+    activite: true,
+  },
+  {
+    name: "Mohamed",
+    activite: false,
+  },
+  {
+    name: "bassine",
+    activite: false,
+  },
+];
+localStorage.setItem("info", JSON.stringify(infos))
+let byJsonFile = localStorage.getItem("info")
+console.log(JSON.parse(byJsonFile));
+
+const number = (...numberss) =>{
+return numberss.map(acc => acc + 2) 
+
+}
+
+let resulte = number(12,1534,34,3,54)
+
+console.log(resulte);
+
+let name = ['reda','wissal']
+let secName = ['fatiha','yassin']
+secName.unshift ('reda',...name)
+console.log(secName)
+let hello = {
+  name:'reda',
+  acitve:true
+}
+let my = {
+  ...hello,
+  
+
+}
+console.log(my)
