@@ -717,6 +717,8 @@ function produnt() {
 }
 
 //this is the end of the async and await
+
+
 // fetch('https://jsonplaceholder.typicode.com/posts')
 // .then(ress => ress.json())
 // .then(post => {
@@ -726,11 +728,12 @@ function produnt() {
 // })
 // })
 // .catch(errors => console.log(errors))
+
+
 localStorage.setItem('note', '20')
 localStorage.setItem('note', '1243');
 let item = localStorage.getItem('note')
 console.log(item)
-localStorage.clear()
 let infos = [{
     name: "Basma",
     activite: true,
@@ -748,30 +751,32 @@ let infos = [{
     activite: false,
   },
 ];
-localStorage.setItem("info", JSON.stringify(infos))
+localStorage.setItem(infos)
+// localStorage.setItem("info", JSON.parse(infos))
+infos.localStorage()
 let byJsonFile = localStorage.getItem("info")
-console.log(JSON.parse(byJsonFile));
+console.log(JSON.parse(byJsonFile) )
+// const number = (...numberss) =>{
+// return numberss.map(acc => acc + 2) 
 
-const number = (...numberss) =>{
-return numberss.map(acc => acc + 2) 
+// }
 
-}
+// let resulte = number(12,1534,34,3,54)
 
-let resulte = number(12,1534,34,3,54)
+// console.log(resulte);
 
-console.log(resulte);
-
-let name = ['reda','wissal']
-let secName = ['fatiha','yassin']
-secName.unshift ('reda',...name)
-console.log(secName)
-let hello = {
-  name:'reda',
-  acitve:true
-}
-let my = {
-  ...hello,
+// let name = ['reda','wissal','reda']
+// let secName = ['fatiha','yassin']
+// secName.unshift ('reda',...name)
+// console.log(secName)
+// let hello = [
+//   name='reda',
+//   name='reda',
+//   name='reda',
+//   acitve=true
+// ]
   
 
-}
-console.log(my)
+
+// let set = new Set(hello)
+
