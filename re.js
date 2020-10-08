@@ -554,22 +554,25 @@ let theForm = document.querySelector(".myForm");
 let theInput = document.querySelector("input");
 let fednax = document.querySelector(".raja");
 let reg = /^[a-zA-Z]{5,10}$/;
-
+let pass = document.querySelector('.paas')
 theForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  // let check = theInput.value
-  // if (reg.test(theInput.value)) {
-  //   fednax.innerText = "yes";
-  // } else {
-  //   fednax.innerText = "no";
-  console.log(theInput.value)
+  let check = theInput.value;
+  if (reg.test(theInput.value)) {
+    fednax.innerText = "yes";
+  } else {
+    fednax.innerText = "no";
+    console.log(theInput.value);
+  }
 });
+
 // this is the keyup for the log in
 
 theForm.addEventListener("keyup", (e) => {
   e.preventDefault();
   // let check = theInput.value
-  if (reg.test(theInput.value)) {
+  if (reg.test(theInput.value)  ) {
+
     theInput.setAttribute("class", "succ");
     fednax.innerText = "This is valid";
   } else {
@@ -577,8 +580,10 @@ theForm.addEventListener("keyup", (e) => {
     fednax.innerText = "this is not valid";
   }
 });
+
 //this is some methode to get you adviece for holw the wodrld to see what cat hapent in this momeb
-let users = [{
+let users = [
+  {
     name: "Basma",
     activite: true,
   },
@@ -616,7 +621,7 @@ let resuce = [3, 6, 4, 34, 34].reduce((a, b) => a + b);
 console.log(resuce);
 const para = document.querySelector(".is");
 let holeTime = document.querySelector(".holeTime");
-let onClick = document.querySelector('.flr')
+let onClick = document.querySelector(".flr");
 
 //this is the real horlang
 const myClock = () => {
@@ -637,15 +642,13 @@ const myClock = () => {
   if (hours == 16 && min == 06 && secound == 00) {
     alert("Hello weak up ");
   }
-  onClick.addEventListener('click', () => {
+  onClick.addEventListener("click", () => {
     setTimeout(() => {
       setInterval(() => {
         para.innerHTML = timing;
-
-      }, 1000)
-    }, 2000)
-
-  })
+      }, 1000);
+    }, 2000);
+  });
 };
 setInterval(myClock, 1000);
 
@@ -662,7 +665,7 @@ function info(id, callback) {
     return callback({
       id: id,
       name: "reda",
-      oneLine: true
+      oneLine: true,
     });
   }, 2000);
 }
@@ -670,43 +673,42 @@ function info(id, callback) {
 //end of the callback never give up
 
 //this is the start of the promis
-reda().then(acc => alert(acc)).catch(refc => alert(refc))
+reda()
+  .then((acc) => alert(acc))
+  .catch((refc) => alert(refc));
 
 function reda() {
   return new Promise((re, reje) => {
     setTimeout(() => {
-      let satus = false;
+      let satus = true;
       if (satus) {
-        re(('yes'))
+        re("yes");
       } else {
-        reje(('no'))
+        reje("no");
       }
-    }, 1000)
-  })
+    }, 1000);
+  });
 }
 //the end promiss
 
 //this is the syanc anda await
 
-
 async function runs() {
   try {
-
     let run = await produnt();
     console.log(run);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-
 }
 
-runs()
+runs();
 
 function produnt() {
   return new Promise((resolve, reject) => {
     let status = false;
     setTimeout(() => {
-      console.log("my name is reda")
+      console.log("my name is reda");
       if (status) {
         resolve("yes ");
       } else {
@@ -718,7 +720,6 @@ function produnt() {
 
 //this is the end of the async and await
 
-
 // fetch('https://jsonplaceholder.typicode.com/posts')
 // .then(ress => ress.json())
 // .then(post => {
@@ -729,12 +730,50 @@ function produnt() {
 // })
 // .catch(errors => console.log(errors))
 
+// localStorage.setItem(infos)
+// localStorage.setItem("info", JSON.parse(infos))
+// infos.localStorage()
+// let byJsonFile = localStorage.getItem("info")
+// console.log(JSON.parse(byJsonFile) )
+// const number = (...numberss) =>{
+// return numberss.map(acc => acc + 2)
 
-localStorage.setItem('note', '20')
-localStorage.setItem('note', '1243');
-let item = localStorage.getItem('note')
-console.log(item)
-let infos = [{
+// }
+
+// let resulte = number(12,1534,34,3,54)
+
+// console.log(resulte);
+
+// let name = ['reda','wissal','reda']
+// let secName = ['fatiha','yassin']
+// secName.unshift ('reda',...name)
+// console.log(secName)
+// let hello = [
+  //   name='reda',
+//   name='reda',
+//   name='reda',
+//   acitve=true
+// ]
+
+// let set = new Set(hello)
+getUser((choise, calls) => {
+  console.log(choise), console;
+});
+
+function getUser(callba, calls) {
+  let includ = true;
+  if (includ) {
+    return callba("yess");
+  } else {
+    !includ;
+  }
+  {
+    return calls("nos");
+  }
+}
+
+let infos = [
+  {
     name: "Basma",
     activite: true,
   },
@@ -751,32 +790,7 @@ let infos = [{
     activite: false,
   },
 ];
-localStorage.setItem(infos)
-// localStorage.setItem("info", JSON.parse(infos))
-infos.localStorage()
-let byJsonFile = localStorage.getItem("info")
-console.log(JSON.parse(byJsonFile) )
-// const number = (...numberss) =>{
-// return numberss.map(acc => acc + 2) 
-
-// }
-
-// let resulte = number(12,1534,34,3,54)
-
-// console.log(resulte);
-
-// let name = ['reda','wissal','reda']
-// let secName = ['fatiha','yassin']
-// secName.unshift ('reda',...name)
-// console.log(secName)
-// let hello = [
-//   name='reda',
-//   name='reda',
-//   name='reda',
-//   acitve=true
-// ]
-  
-
-
-// let set = new Set(hello)
-
+  localStorage.setItem('get ', JSON.stringify(infos))
+let resta = localStorage.getItem('get ')
+console.log(JSON.parse(resta))
+console.log(infos)
