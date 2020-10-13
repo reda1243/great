@@ -535,20 +535,20 @@
 // nums.addEventListener('click',re =>{
 //   console.log('iamd the ul')
 // })
-const pan = document.querySelectorAll("p");
-Array.from(pan).forEach((pans, index) => {
-  console.log(pans, index + 9);
-});
+// const pan = document.querySelectorAll("p");
+// Array.from(pan).forEach((pans, index) => {
+//   console.log(pans, index + 9);
+// });
 
-const paras = document.querySelectorAll("p");
-paras.forEach((para) => {
-  para.addEventListener("click", (e) => {
-    para.style.color = "pink";
-    for (let i = 0; i < paras.length; i++) {
-      console.log(paras[i]);
-    }
-  });
-});
+// const paras = document.querySelectorAll("p");
+// paras.forEach((para) => {
+//   para.addEventListener("click", (e) => {
+//     para.style.color = "pink";
+//     for (let i = 0; i < paras.length; i++) {
+//       console.log(paras[i]);
+//     }
+//   });
+// });
 
 let theForm = document.querySelector(".myForm");
 let theInput = document.querySelector("input");
@@ -642,15 +642,17 @@ const myClock = () => {
   if (hours == 16 && min == 06 && secound == 00) {
     alert("Hello weak up ");
   }
-  onClick.addEventListener("click", () => {
-    setTimeout(() => {
-      setInterval(() => {
+  onClick.addEventListener("click", (es) => {
+    es.preventDefault()
+      setInterval((e) => {
+        
         para.innerHTML = timing;
       }, 1000);
-    }, 2000);
-  });
-};
-setInterval(myClock, 1000);
+    
+})
+}
+myClock()
+// setInterval(myClock, 1000);
 
 //this is for diffecelt but with time will be so easy
 info(10, (call) => {
@@ -792,5 +794,66 @@ let infos = [
 ];
   localStorage.setItem('get ', JSON.stringify(infos))
 let resta = localStorage.getItem('get ')
-console.log(JSON.parse(resta))
-console.log(infos)
+console.log(JSON.parse(resta));
+
+// let news = document.querySelectorAll('p');
+// news.forEach(ns =>{
+//   ns.addEventListener('click',(e)=>{
+// console.log(e.timeStamp)
+//   })
+//   })
+// const numbers = (...num)=>{
+//    return num.forEach(nu =>{
+//     console.log(n)
+//   })
+// }  
+// let rusolve = numbers(6,6,4,74)
+// console.log(rusolve)
+//  numbers(3,3335,5,3,343)
+ const nom = new Set()
+ nom.add('reTUYda')
+console.log(nom)
+let onw  = document.querySelector('.one')
+let two = document.querySelector('.two')
+let sum = document.querySelector('.sum')
+let resul = document.querySelector('.result')
+ onw = Number(onw)
+ two = Number(two)
+sum.addEventListener('submit', (et)=>{
+et.preventDefault()
+let ruslta =  two.value + onw.value
+resul.innerText = ruslta
+})
+let names = ['red','redA','tree']
+let mySeet = new Set(names)
+console.log(mySeet)
+
+let ste = 'green';
+let resutles = !!ste
+console.log(resutles)
+class Nega {
+  constructor(school,note,from){
+  this.school = school,
+  this.note = note,
+  this.from = from
+  }
+  anatherWay(){
+    console.log( `the name of the school is  ${this.school}  a get ${this.note},and iam from ${this.from}`)
+  }}
+
+
+let oop = new Nega('hassan 2',34,'maroc')
+console.log(oop.anatherWay())
+
+//the new class but the eritage 
+class Suber extends Nega{
+  // constructor(){
+
+  // }
+  hello(){
+    console.log( `the name of the school is  ${this.school}  a get ${this.note},and iam from ${this.from}`)
+  }
+
+}
+let best = new Suber('lala ',23,'maroc')
+console.log(best.hello())
